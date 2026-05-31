@@ -1,0 +1,44 @@
+<svg width="1200" height="380" viewBox="0 0 1200 380" xmlns="http://www.w3.org/2000/svg" font-family="'SF Mono','JetBrains Mono',ui-monospace,Menlo,monospace">
+  <style>
+    /* 静态可见：元素默认可见，仅用 @keyframes 0% + backwards 设入场起点 */
+    .bar  { transform-box: fill-box; transform-origin: center; }
+    .b1 { animation: grow 0.8s cubic-bezier(0.16,1,0.3,1) 0.15s backwards; }
+    .b2 { animation: grow 0.8s cubic-bezier(0.16,1,0.3,1) 0.30s backwards; }
+    .b3 { animation: grow 0.8s cubic-bezier(0.16,1,0.3,1) 0.45s backwards, pulse 2.8s ease-in-out 1.6s infinite; }
+    .arrow { animation: fadeIn 0.6s ease-out 0.7s backwards; }
+    .word  { animation: up 0.9s cubic-bezier(0.16,1,0.3,1) 0.55s backwards; }
+    .rule  { transform-box: fill-box; transform-origin: left center; animation: grow 0.7s cubic-bezier(0.16,1,0.3,1) 0.85s backwards; }
+    .tag   { animation: fadeIn 0.9s ease-out 1.0s backwards; }
+    @keyframes grow   { 0% { transform: scaleX(0.45); opacity: 0; } }
+    @keyframes up     { 0% { transform: translateY(16px); opacity: 0; } }
+    @keyframes fadeIn { 0% { opacity: 0; } }
+    @keyframes pulse  { 0%,100% { opacity: 1; } 50% { opacity: 0.62; } }
+  </style>
+
+  <!-- 背景：暖米黄 -->
+  <rect width="1200" height="380" rx="20" fill="#FAF6EF"/>
+
+  <!-- 品牌符号：三层收窄漏斗（整个项目 → 一个文件 → 一块主干/核心） -->
+  <g>
+    <rect class="bar b1" x="92"  y="118" width="244" height="34" rx="8" fill="#CFC7B8"/>
+    <rect class="bar b2" x="127" y="170" width="174" height="34" rx="8" fill="#A99B82"/>
+    <rect class="bar b3" x="159" y="222" width="110" height="34" rx="8" fill="#E8833A"/>
+    <!-- 向下收窄的指引箭头：指向"主干/核心" -->
+    <path class="arrow" d="M214 272 l0 28 M201 289 l13 13 l13 -13" fill="none" stroke="#B0651F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- 文字组 -->
+  <g class="word">
+    <text x="392" y="212" font-size="92" font-weight="700" letter-spacing="-2">
+      <tspan fill="#2B2A28">learn</tspan><tspan fill="#E8833A">-code</tspan>
+    </text>
+  </g>
+
+  <!-- 错位分隔线（橙） -->
+  <rect class="rule" x="398" y="238" width="232" height="5" rx="2.5" fill="#E8833A"/>
+
+  <!-- 稳定 tagline：不含数字/版本/列表 -->
+  <text class="tag" x="400" y="288" font-size="27" fill="#6B6357" font-style="italic" font-family="Georgia,'Times New Roman',serif">
+    read code, module <tspan fill="#B0651F" font-style="normal" font-family="'SF Mono',monospace">&#8594;</tspan> trunk &#183; understand, don&#8217;t just write
+  </text>
+</svg>

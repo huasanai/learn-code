@@ -1,5 +1,7 @@
 # learn-code
 
+<p align="center"><img src="assets/logo.svg" alt="learn-code — read code, module → trunk" width="760"></p>
+
 ![type](https://img.shields.io/badge/type-Claude%20Code%20Skill-7c4dff)
 ![license](https://img.shields.io/badge/license-MIT-green)
 ![method](https://img.shields.io/badge/method-module%E2%86%92trunk-orange)
